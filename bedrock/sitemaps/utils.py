@@ -123,12 +123,6 @@ def get_static_urls():
 
             locales = render.call_args[0][2]['translations'].keys()
 
-            # 'hi' is not a production locale code, but it does show up in
-            # lists of translations for legal-docs based pages.
-            if 'hi' in locales:
-                locales.remove('hi')
-                locales.append('hi-IN')
-
             # zh-CN is a redirect on the homepage
             if path == '/':
                 locales.remove('zh-CN')
