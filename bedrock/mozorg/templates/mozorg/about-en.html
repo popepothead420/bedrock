@@ -17,7 +17,7 @@
 {% endblock %}
 
 {# TODO: migrate to global macro #}
-{% macro card_block(class, tag_label, media_icon, title, ga_title, desc, image_url, include_highres_image, video_url, aspect_ratio, link_url, meta) -%}
+{% macro card_block(class, tag_label, media_icon, title, ga_title, desc, image_url, include_highres_image, video_url, aspect_ratio, link_url, meta, cta) -%}
 <section class="mzp-c-card {% if class %}{{ class }}{% endif %} {% if aspect_ratio %}{{ aspect_ratio }}{% endif %} {% if media_icon %}{{ media_icon }}{% endif %} {% if video_url %}has-video-embed{% endif %}">
   <a class="mzp-c-card-block-link" href="{{ link_url }}" data-link-name="{{ ga_title }}" data-link-type="link">
     <div class="mzp-c-card-media-wrapper">
@@ -33,6 +33,9 @@
     {% endif %}
     {% if meta %}
       <p class="mzp-c-card-meta">{{ meta }}</p>
+    {% endif %}
+    {% if cta %}
+      <p class="mzp-c-card-cta"><span class="mzp-c-card-cta-text">{{ cta }}</span></p>
     {% endif %}
     </div>
   </a>
@@ -190,7 +193,8 @@
         image_url='mozorg/about/careers.jpg',
         include_highres_image=True,
         aspect_ratio='mzp-has-aspect-3-2',
-        link_url='https://careers.mozilla.org'
+        link_url='https://careers.mozilla.org',
+        cta=_('Mozilla Careers')
     )}}
     {{ card_block(
         class='mzp-c-card-medium',
@@ -200,7 +204,8 @@
         image_url='mozorg/about/involved.jpg',
         include_highres_image=True,
         aspect_ratio='mzp-has-aspect-3-2',
-        link_url=url('mozorg.contribute.index')
+        link_url=url('mozorg.contribute.index'),
+        cta=_('Get Involved')
     )}}
   </div>
 </div>
