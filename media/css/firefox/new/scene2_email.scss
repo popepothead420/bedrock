@@ -164,6 +164,21 @@ $image-path: '/media/protocol/img';
     }
 }
 
+// Mobile download CTA
+.mobile-download {
+    a {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    @media #{$mq-md} {
+        li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+}
+
 .mzp-t-dark {
     :link,
     :visited {

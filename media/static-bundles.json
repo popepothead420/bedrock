@@ -710,6 +710,12 @@
       "name": "firefox-home"
     },
     {
+    "files": [
+        "css/firefox/home-pre-download.scss"
+    ],
+    "name": "firefox-home-pre-download"
+    },
+    {
       "files": [
         "css/firefox/whatsnew/whatsnew-57-letter.scss"
       ],
@@ -981,7 +987,6 @@
         "protocol/js/protocol-modal.js",
         "protocol/js/protocol-newsletter.js",
         "js/newsletter/form-protocol.js",
-        "js/firefox/new/scene2.js",
         "js/firefox/new/scene2-email.js"
       ],
       "name": "firefox_new_scene2_email"
@@ -1188,6 +1193,26 @@
         "js/firefox/home/main.js"
       ],
       "name": "firefox-home"
+    },
+    {
+      "files": [
+         "js/firefox/home/pre-download-a.js"
+      ],
+      "name": "firefox-home-pre-download-a"
+    },
+    {
+      "files": [
+        "js/base/mozilla-modal.js",
+        "js/firefox/home/pre-download-b.js"
+      ],
+      "name": "firefox-home-pre-download-b"
+    },
+    {
+      "files": [
+        "js/base/mozilla-traffic-cop.js",
+        "js/firefox/home/experiment-pre-download.js"
+      ],
+      "name": "experiment-firefox-home-pre-download"
     },
     {
       "files": [

@@ -80,8 +80,11 @@
         {{ _('Learn how to make Firefox even smarter, faster and more secure.') }}
       {% endblock %}
       </h1>
+      {% block tagline %}
       <p class="tagline">{{ _('Get informative tips, tricks and product announcements delivered to your inbox.') }}</p>
+      {% endblock %}
 
+      {% block cta %}
       <div class="mzp-c-newsletter">
         {{ email_newsletter_form(
               protocol_component=True,
@@ -90,6 +93,7 @@
               details='<a href="%s" class="email-privacy-link">%s</a>'|format(url('privacy.email'), _('How will Mozilla use my email?'))|safe
         )}}
       </div>
+      {% endblock %}
 
       <aside class="email-privacy mzp-u-modal-content">
         <h3>{{ _('How will Mozilla use my email?') }}</h3>
@@ -123,5 +127,7 @@
   {% if switch('tracking-pixel') %}
     {{ js_bundle('firefox_new_pixel') }}
   {% endif %}
+  {# Keep download JS in a separate bundle to email JS, to reduce risk of errors interrupting download. #}
   {{ js_bundle('firefox_new_scene2_email') }}
+  {{ js_bundle('firefox_new_scene2') }}
 {% endblock %}
