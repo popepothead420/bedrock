@@ -202,7 +202,9 @@ established in any of its products, features, service names, or logos.{% endtran
   </ul>
 
   <h2>{{ _('Logos') }}</h2>
-  {{ high_res_img('trademarks/Pocket_wordmark.png', { 'alt': _('Pocket wordmark'), 'width': '300', 'height': 'auto' }) }}
+
+  <img width="300" height="auto" alt="{{ _('Pocket wordmark') }}®" src="{{ static('img/trademarks/Pocket_wordmark.png') }}" />
+
   <p>{% trans %}Website Logo and Wordmark{% endtrans %}</p>
   <p>{% trans %}Pocket logos:{% endtrans %}</p>
   <table id="logos">
@@ -211,8 +213,8 @@ established in any of its products, features, service names, or logos.{% endtran
       <th>{{ _('Android') }}</th>
     </tr>
     <tr>
-      <td><img width="100" height="100" alt="{{ _('Thunderbird logo') }}®" src="{{ static('img/trademarks/thunderbird_logo_100.png') }}" /></td>
-      <td><img width="100" height="100" alt="{{ _('Thunderbird logo') }}®" src="{{ static('img/trademarks/thunderbird_logo_100.png') }}" /></td>
+      <td><img width="100" height="100" alt="{{ _('Pocket Mac logo') }}®" src="{{ static('img/trademarks/Pocket_AppIcon_Mac.png') }}" /></td>
+      <td><img width="100" height="100" alt="{{ _('Pocket Android logo') }}®" src="{{ static('img/trademarks/Pocket_AppIcon_Android.png') }}" /></td>
     </tr>
     <tr>
       <th>{{ _('iOS') }}</th>
